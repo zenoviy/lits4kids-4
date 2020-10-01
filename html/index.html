@@ -5,9 +5,38 @@
 <head>
 	<meta charset="utf-8">
 	<title>First Page</title>
+	<link href="./css/main-style.css" rel="stylesheet">
 </head>
 
+<style>
+/*p {
+	color: #ff0000;
+	font-size: 18px;
+}
+h1 {
+	color: brown;
+}
+h2, h3, h4 {
+	color: orange;
+	text-transform: uppercase;
+}
+
+.page-text-style {
+	color: #ff8080;
+	font-size: 18px;
+	font-weight: bold;
+}
+.block-type-left {
+	width: 30%;
+	background-color: #000;
+}
+.block-type-right {
+	width: 50%;
+	background-color: #BA55D3;
+}*/  /*comment*/
+</style>
 <body>
+	<!-- This is my page comment for future developers -->
 	<header>
 		<nav>
 			<h3>Main menu</h3>
@@ -47,13 +76,30 @@
 				<h5>Hello World</h5>
 				<h6>Hello World</h6>
 
-				<p>
+				<div class="cards-container">
+					<div class="card">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+						<button class="btn">click Me</button>
+					</div>
+					<div class="card card-central-style">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+
+					</div>
+					<div class="card">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+					</div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+				</div>
+
+				<p class="page-text-style block-type-left" >
 					<i><b>Lorem ipsum</b> dolor sit amet, consectetur adipiscing elit,</i> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <mark>Duis aute irure dolor</mark> in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</p>
-				<p>
+				<p class="page-text-style block-type-right">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br><br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</p>
-				<details>
+				<details class="cleared-float">
 					<summary>
 						Lorem ipsum Details
 					</summary>			
