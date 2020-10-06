@@ -8,6 +8,7 @@ body {
 	background-size: contain;
 	background-size: cover;
 	background-attachment: fixed;
+	margin: 0;
 }
 
 p {
@@ -73,3 +74,54 @@ main section p.block-type-left {
 	color: #fff;
 	cursor: pointer;
  }
+
+
+ /* css for html Grail  */
+
+.background-gray-color {
+	background: #B3ACAC;
+}
+.background-purple-color {
+	background: #FCCBA1;
+}
+.background-blue-color {
+	background: #66A1DD;
+}
+.background-teal-color {
+	background: #008080;
+}
+
+
+.main-page-header {
+	overflow: auto;
+}
+.main-page-header nav ul {
+ 	display: flex;
+ 	list-style: none;
+}
+.main-page-header nav ul a {
+	text-decoration: none;
+	padding: 10px;
+	color: brown;
+}
+
+.page-body-wrapper {
+	display: flex;
+}
+.page-body-wrapper .left-page-menu,
+.page-body-wrapper .right-product-adwertisement-area {
+	width: 20%;
+}
+
+.page-body-wrapper section.main-page-content-area {
+	width: 60%;
+	background: white;
+}
+
+
+.page-body-wrapper 
+section.main-page-content-area 
+.main-page-upper-columns {
+	display: flex;
+	justify-content: space-around;
+}
