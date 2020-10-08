@@ -227,10 +227,13 @@ section.main-page-content-area
 
 /* Responsive Media query selectors */
 
-
+@media screen and (max-width: 800px){
+	.background-purple-color {
+		background: #C14D00;
+	}
+}
 @media screen and (max-width: 650px){
 	.background-purple-color {
 		background: #979100;
 	}
-
 }
