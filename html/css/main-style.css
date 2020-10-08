@@ -201,7 +201,7 @@ main, section.main-page-content-area {
 	padding: 10px;
 	background: #9795B5;
 }
-.strips-list li:nth-child (even) {
+.strips-list li:nth-child(even) {
 	background: #723885;
 }
 
