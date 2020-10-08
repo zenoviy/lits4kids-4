@@ -1,6 +1,16 @@
 @import "./main-fonts.css";
 
 
+:root {
+	--main-black-color: #000;
+	--main-gray-color: #B3ACAC;
+	--main-purple-color: #FCCBA1;
+
+	--footer-default-height: 150px;
+	--main-page-height: 90vh;
+}
+
+
 body {
 	background-image: url("https://www.learnreligions.com/thmb/QV3uUjKJ0yM6mgpqs4uSKSsuBkA=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/gi-white-light-geometry.jpg-5820c40b5f9b581c0b51b2ab.png");
 	background-repeat: no-repeat;
@@ -79,10 +89,10 @@ main section p.block-type-left {
  /* css for html Grail  */
 
 .background-gray-color {
-	background: #B3ACAC;
+	background: var(--main-gray-color);
 }
 .background-purple-color {
-	background: #FCCBA1;
+	background: var(--main-purple-color);
 }
 .background-blue-color {
 	background: #66A1DD;
@@ -92,25 +102,107 @@ main section p.block-type-left {
 }
 
 
+main, section.main-page-content-area {
+	padding-top: 60px;
+}
+
+
+.page-container-area {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
 .main-page-header {
 	overflow: auto;
+	position: fixed;
+	width: 100%;
+	z-index: 5;
 }
 .main-page-header nav ul {
  	display: flex;
  	list-style: none;
+ 	margin: 0px;
 }
+.main-page-header nav ul li {
+	padding: 20px;
+	background: none;
+	transition: background 1.5s linear;
+}
+.main-page-header nav ul li:hover {
+	background: #fff;
+}
+.main-page-header nav ul li:hover a {
+	color: blue;
+}
+.main-page-header nav ul li.active-menu {
+	background: #fff;
+}
+
+
 .main-page-header nav ul a {
 	text-decoration: none;
 	padding: 10px;
 	color: brown;
+	transition: color 1.5s linear;/**/
 }
+
 
 .page-body-wrapper {
 	display: flex;
+	min-height: var(--main-page-height);
 }
 .page-body-wrapper .left-page-menu,
 .page-body-wrapper .right-product-adwertisement-area {
 	width: 20%;
+}
+
+.left-page-menu ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+.left-page-menu ul li {
+	padding: 10px 0px 10px 0px;
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid red;
+	transition: background 1.5s cubic-bezier(.17,.67,.84,.39);
+}
+.left-page-menu ul li:hover {
+	background: #fff;
+}
+
+.test-picture {
+	width: 80%;
+	margin: 0 auto;
+	display: block;
+	transition: .5s linear;
+}
+.test-picture:hover {
+	filter: none;
+}
+.blur-picture {
+	filter: blur(5px);
+}
+.sepia-picture {
+	filter: grayscale(1);
+}
+.hue-color-picture {
+	filter: saturate(8);
+}
+ 
+
+.strips-list {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+.strips-list li {
+	padding: 10px;
+	background: #9795B5;
+}
+.strips-list li:nth-child (even) {
+	background: #723885;
 }
 
 .page-body-wrapper section.main-page-content-area {
@@ -118,10 +210,27 @@ main section p.block-type-left {
 	background: white;
 }
 
-
 .page-body-wrapper 
 section.main-page-content-area 
 .main-page-upper-columns {
 	display: flex;
 	justify-content: space-around;
+}
+
+.page-footer {
+	background: var(--main-black-color);
+	min-height: var(--footer-default-height);
+}
+
+
+
+
+/* Responsive Media query selectors */
+
+
+@media screen and (max-width: 650px){
+	.background-purple-color {
+		background: #979100;
+	}
+
 }
