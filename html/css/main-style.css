@@ -1,4 +1,5 @@
 @import "./main-fonts.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
 :root {
@@ -10,7 +11,10 @@
 	--main-page-height: 90vh;
 }
 
-
+html {
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+}
 body {
 	background-image: url("https://www.learnreligions.com/thmb/QV3uUjKJ0yM6mgpqs4uSKSsuBkA=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/gi-white-light-geometry.jpg-5820c40b5f9b581c0b51b2ab.png");
 	background-repeat: no-repeat;
@@ -36,6 +40,27 @@ main section p.block-type-left {
 	column-count: 3;
 }
 
+
+
+.page-main-banner {
+	background: #eee;
+	background-image: url(https://cdn.getyourguide.com/img/tour/51c46ff2cfb62.jpeg/148.jpg);
+	background-size: cover;
+	background-position: bottom center;
+	background-attachment: fixed;
+	height: 600px;
+	overflow: auto;
+}
+.page-main-banner .main-banner-inner-area {
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.3);
+}
+.arrow-down {
+	font-size: 5rem;
+}
 
 .page-text-style {
 	color: #ff8080;
@@ -190,6 +215,45 @@ main, section.main-page-content-area {
 .hue-color-picture {
 	filter: saturate(8);
 }
+
+.scale-this-picture, 
+.rotate-style {
+	transition: .5s linear;
+}
+.scale-this-picture:hover {
+	transform: scale(1.2);
+}
+
+.rotate-style:hover {
+	transform: rotateX(180deg);
+}
+
+.advanced-animation {
+	height: 250px;
+	width: 500px;
+	background-image: url(https://cdn.getyourguide.com/img/tour/51c46ff2cfb62.jpeg/148.jpg);
+	background-size: 100%;
+	background-position-x: 0px;
+	background-position-y: 0px;
+	animation: city-live 4s linear forwards; /*infinite*/
+	/*animation-name: city-live;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;*/
+
+}
+@keyframes city-live {
+	0% { background-position-y: 0px; 
+		background-position-x: 0px;
+	}
+	60% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+	100% { background-position-y: 1250px; 
+		background-position-x: 1250px;
+		transform: rotateX(360deg) rotateY(180deg);
+	}
+}
+
+
+
  
 
 .strips-list {
@@ -225,6 +289,8 @@ section.main-page-content-area
 
 
 
+
+
 /* Responsive Media query selectors */
 
 @media screen and (max-width: 800px){
@@ -233,6 +299,18 @@ section.main-page-content-area
 	}
 }
 @media screen and (max-width: 650px){
+	.main-page-header {
+		position: relative;
+	}
+	.main-page-header .main-menu-inner-area ul,
+	.page-body-wrapper {
+		display: block;
+	} 
+	.page-body-wrapper .left-page-menu, 
+	.page-body-wrapper .right-product-adwertisement-area,
+	.page-body-wrapper section.main-page-content-area {
+		width: 100%;
+	}
 	.background-purple-color {
 		background: #979100;
 	}
