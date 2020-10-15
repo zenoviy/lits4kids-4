@@ -235,7 +235,7 @@ main, section.main-page-content-area {
 	background-size: 100%;
 	background-position-x: 0px;
 	background-position-y: 0px;
-	animation: city-live 4s linear forwards; /*infinite*/
+	animation: city-live 4s linear infinite; /*forwards*/
 	/*animation-name: city-live;
 	animation-duration: 4s;
 	animation-iteration-count: infinite;*/
