@@ -1,0 +1,16 @@
+@media screen and (max-width: 900px){
+	.card-wrapper {
+	    grid-template-columns: auto auto;
+    }
+    .featured-project {
+        background-position:top;
+        background-image: url(../img/phone-small.png),linear-gradient(120deg, #f4590b, #ffde58);
+        background-position: right;
+	}
+	.grid-container {
+	    display: grid;
+	    grid-column-gap: var(--gap);
+	    grid-row-gap: var(--gap);
+	    grid-template-columns: auto auto auto
+	}
+}
