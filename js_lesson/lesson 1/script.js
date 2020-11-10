@@ -113,7 +113,7 @@ let multyArray = [
 ];
 
 console.log( multyArray[1][2] );*/
-
+/*
 let mySecondArray = [];
 mySecondArray.push("John");
 mySecondArray.push("Stephanie");
@@ -166,12 +166,185 @@ let numberArray = [2, 345, 5, 23, 89, 23, 80, 5, 1];
 let rearangedArray = numberArray.sort((a, b) => {
 	return a - b;
 });
-console.log(rearangedArray);
+console.log(rearangedArray);*/
+
+//  ===================   Loop  Цикл  =========================  ///
+
+// for     for of     for in        ( умова кінцевості, внутрішшня змінна)  приводить змінну до умови кінечності
+// while      ( умова ) доки умова  != true   Infinity
+// do while     do буде виконане полюбому 1 раз
+
+/*const nameArr = [ "Elin", "Dart Vaider", "Erika", "Maryam", "Rush", "Erika", "Hermione" ];
+const multyLayerArray = [  
+	[1, 45, 56],
+	[34, 56, 67, 34, 45, 78, 12, 67],
+	[33, 5, 90],
+	["Hello", "i", "am", "a", "automated", "script"]
+];
+multyLayerArray[1][2];
+const object = {
+	name: "Erika",
+	state: "Lviv",
+	age: 23
+}
+
+// break 
+// continue
+for(let i = 10; i > 0; i--){
+	if( i < 5 && i > 2 ) continue;
+	//if( i < 5 && i > 2 ) break;
+	document.write(i)
+}
+
+for(let i = 0; i <= 10; i++){
+	for(let j = 0; j <=10; j++){
+		console.log(`${i} x ${j} = ${ i * j }` );
+	}
+}
+
+for(let a = 0; a < multyLayerArray.length; a++){
+	for(let m = 0; m < multyLayerArray[a].length; m++){
+		console.log( multyLayerArray[a][m], "Mukty")
+	}
+}
+
+
+for(let i = 0; i < nameArr.length; i++){
+	//console.log( nameArr[i] )
+	document.write( nameArr[i]  + " > ")
+}
+
+
+for(let item in object){
+	console.log(item, object[item])
+}
+
+for(let name of nameArr){
+	console.log(name, nameArr.indexOf(name))
+}
+
+///   while
+
+let someItarableNumber = 20;
+while(someItarableNumber > 10) {
+	someItarableNumber = Math.floor(Math.random() * 105 + 1);
+	//document.write(someItarableNumber + " || ")
+}
+
+let someDoWhileNumber = 0;
+let randomNumberArr = [];
+do{
+	//document.write("I am Default DO WHILE: " + someDoWhileNumber + " || ");
+	someDoWhileNumber = Math.floor(Math.random() * 105 + 1);
+	document.write(someDoWhileNumber + " || ")
+	randomNumberArr.push(someDoWhileNumber)
+} while (someDoWhileNumber > 10)
+
+
+console.log(randomNumberArr, " < Random Array")
+
+let myNumber = 1;
+
+//  i++		i--
+//  ++i   --i 
+
+myNumber += 1;
+console.log( myNumber, ++myNumber )
+
+//console.log(myNumber)*/
 
 
 
+//  ===================   Logic    goTo  =========================  ///
+
+let a = -50;
+let b = 10;
+let c = 45;
+
+let trully = true;
+let falsy = false;
+/*if( falsy ){
+	document.write("Hello")
+} else if( !falsy ){
+	document.write("I am FALSY")
+} else {
+	document.write("I am ELSE")
+}*/
 
 
+//  >   <    <=    >=
+
+if(a > b){
+	if( a > c ) document.write( a + " A is the greates" )
+	else document.write( c + " C is the greates" )
+} else if( b > c ){
+		// B is the gratest
+		document.write( b + " B is the greates" )
+} else {
+	// C is the gratest
+	document.write( c + " C is the greates" )
+}
+
+//  ==   ===   !   !=   !==  
+
+// &&    ||
+
+if( (5 + 10) >= 10) {
+	document.write("(5 + 10) >= 10")
+}
+
+if( true && true && true && true ){
+	document.write(" I am a true branch  || ")
+}
+
+
+if( true && true && true && false ){
+	document.write(" I am unricheble code becourse FALSE ")
+} else {
+	document.write(" Failure branch || ")
+}
+
+
+
+if( false || false || true || false ){
+	document.write(" I am works becourse i'm using << OR >> || ")
+} else {
+	document.write(" Failure branch || ")
+}
+
+
+
+if( (a > b) && (a > c) ){ 
+	document.write( a + " A is the greates" )
+} else if( b > c && b > a){
+	document.write( b + " B is the greates" )
+} else {
+	document.write( c + " C is the greates" )
+}
+
+
+const calcNumberA = parseInt(prompt("Введіть число A"));
+const calcNumberB =  parseInt(prompt("Введіть число B", 0));
+const mathLogic = prompt("Введіть Дію над числом A і B  може бути + - * /", "+");
+
+if( (!calcNumberA && calcNumberA != 0) || !calcNumberB && calcNumberB != 0 ){
+	alert("Неправильно введені дані мають бути числа")
+} else if(mathLogic != "+" && mathLogic != "-" && mathLogic != "*" && mathLogic != "/" ){
+	alert("Неправидьна дія має бути + - * /")
+}
+else {
+	let mathResult = 0;
+	if( mathLogic === "+") {
+		mathResult = calcNumberA + calcNumberB;
+	} else if(mathLogic === "-") {
+		mathResult = calcNumberA - calcNumberB;
+	} else if(mathLogic === "*") {
+		mathResult = calcNumberA * calcNumberB;;
+	} else if(mathLogic === "/") {
+		mathResult = calcNumberA / calcNumberB;
+	}
+	alert( `${calcNumberA} ${mathLogic} ${calcNumberB} = ${mathResult}  || Оператор ${ mathLogic }` );
+}
 
 
 
