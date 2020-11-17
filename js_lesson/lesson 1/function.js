@@ -11,7 +11,7 @@
 //  Функція вираз
 //  ES6  - Arrow function 
 //  IIFE   - функції самовиклику   Immediately Invoked Function Expression
-
+/*
 console.log(myFirstFunction())
 
 
@@ -19,10 +19,10 @@ console.log(myFirstFunction())
 function myFirstFunction() {        //  Declaration function 
     return "hello"
 }
-
+*/
 
 /*  Function program Declaration */
-
+/*
 runSum(13, 6, true);
 runSum(45, 21, false);
 runSum(56, 33, 56);
@@ -40,25 +40,25 @@ function runSum(a, b = 10){
     console.log( arguments )
     let sumResult = sumOfTwoNumber(a, b);
     return logResult(sumResult)
-}
+}*/
 
 /*  Expession function   вираз */
 
-const myExpressionFunction = function (a, b) {
+/*const myExpressionFunction = function (a, b) {
     return logResult(a * b + " Expression")
 }
-myExpressionFunction(45, 45)
+myExpressionFunction(45, 45)*/
 
 
 /*  ES 6  Arrow Functions  */
 
-const myArrowFunction = (a, b) => {
+/*const myArrowFunction = (a, b) => {
     return logResult(a - b + " i am Arrow")
 } 
 myArrowFunction(10, 3);
 
 
-const simpleArrowFunction = a => logResult(a + " => instant function call");
+const simpleArrowFunction = a => logResult(a + " => instant function call");*/
 
 
 
@@ -73,7 +73,7 @@ const simpleArrowFunction = a => logResult(a + " => instant function call");
 
 /**/
 // ===================================================  Function Calculator =========================================
-(function(){
+/*(function(){
 	initCalculation()
 	function initCalculation(){
 		// debugger
@@ -81,16 +81,8 @@ const simpleArrowFunction = a => logResult(a + " => instant function call");
 		let validationResult = inputValidation(userData);
 		if( validationResult[0] ){
 			let calculationInfo = calculation(userData);
-			/*displayResult(validationResult[0], calculationInfo);
-			if(confirm("Continue calculation?")){
-				initCalculation()
-			}*/
 			displayAndReuseCalculation(initCalculation, validationResult[0], calculationInfo)
 		} else {
-			/*displayResult(validationResult[0], validationResult[1]);
-			if(confirm("Continue calculation?")){
-				initCalculation()
-			}*/
 			displayAndReuseCalculation(initCalculation, validationResult[0], validationResult[1])
 		}
 	}
@@ -158,7 +150,7 @@ function displayResult(status, information){
 	} else {
 		alert(information)
 	}
-}
+}*/
 
 // ============================================================================================
 
