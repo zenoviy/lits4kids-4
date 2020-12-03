@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <div class="container-of-forms my-form-row">
+        <div>
+            <form name="userMainForm">
+                <fieldset>
+                    <legend>Create New User</legend>
+
+                    <label>
+                        <p>User name *</p>
+                        <input 
+                            name="userName"
+                            type="text" 
+                            required 
+                            maxlength="15" 
+                            minlength="3"
+                            placeholder="Enter You`s name!"
+                        >
+                    </label>
+
+                    <label>
+                        <p>User mail *</p>
+                        <input 
+                            name="userMail"
+                            type="email" 
+                            required 
+                            placeholder="Enter You`s email!"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                        >
+                    </label>
+
+                    <label>
+                        <p>User color *</p>
+                        <input 
+                            name="userColor"
+                            type="color" 
+                            required 
+                            value="red"
+                        >
+                    </label>
+
+                    <label>
+                        <p>Chose you`r age</p>
+
+                        <span>< 12</span>
+                        <input type="radio" name="userAge">
+
+                        <span>> 12 and < 18</span>
+                        <input type="radio" name="userAge">
+
+                        <span>> 18 and < 30</span>
+                        <input type="radio" name="userAge">
+
+                        <span>> 30</span>
+                        <input type="radio" name="userAge">
+                    
+                    </label>
+            
+                    <input type="submit" 
+                    value="Create user"> 
+
+
+
+                </fieldset>
+            </form>
+        </div>
+        <div>
+            <ul id="userList"></ul>
+        </div>
+    </div>
+
+<script src="./js/script.js"></script>
+</body>
+</html>
