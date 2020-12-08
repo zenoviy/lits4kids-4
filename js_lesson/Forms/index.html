@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
-    <div class="container-of-forms my-form-row">
-        <div>
-            <form name="userMainForm">
+    <div class="container-of-forms my-form-row container">
+        <div class="form-wrapper">
+            <form class="form-controller" name="userMainForm">
                 <fieldset>
                     <legend>Create New User</legend>
 
@@ -52,16 +51,16 @@
                         <p>Chose you`r age</p>
 
                         <span>< 12</span>
-                        <input type="radio" name="userAge">
+                        <input type="radio" value="< 12" name="userAge">
 
                         <span>> 12 and < 18</span>
-                        <input type="radio" name="userAge">
+                        <input type="radio" value="> 12 and < 18" name="userAge">
 
                         <span>> 18 and < 30</span>
-                        <input type="radio" name="userAge">
+                        <input type="radio" value="> 18 and < 30" name="userAge">
 
                         <span>> 30</span>
-                        <input type="radio" name="userAge">
+                        <input type="radio" value="> 30" name="userAge">
                     
                     </label>
             
@@ -73,7 +72,7 @@
                 </fieldset>
             </form>
         </div>
-        <div>
+        <div class="list-wrapper">
             <ul id="userList"></ul>
         </div>
     </div>
