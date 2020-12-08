@@ -2,6 +2,9 @@ body {
     margin: 0;
     background: linear-gradient(142deg, rgba(103,103,255,1) 0%, rgba(255,0,86,1) 100%);
 }
+input, form, button {
+    outline: none;   /* Забирає обведення при вибиранні від браузера в Google chrome */
+}
 .container {
     margin: 0 auto;
     max-width: 1200px;
