@@ -25,7 +25,7 @@ appStorage.selectors.mainForm.addEventListener('submit', (e) => {
     let checkUniqueUser = checkExistUser(userData, appStorage); /*Перевіряємо чи є юзер*/
     if(checkUniqueUser) return alert(`User with ${userData.userMail} already exist`) /* якщо юзер був знайдений то видасть цей alert */
     
-    appStorage.selectors.mainForm.reset();
+    appStorage.selectors.mainForm.reset();  ///   Очищує форму від значень
     saveToLocalStorage(appStorage, userData)
     viewUserList(appStorage)
     //console.log(appStorage.allUsers)
