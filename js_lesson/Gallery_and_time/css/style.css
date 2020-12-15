@@ -1,0 +1,32 @@
+body {
+    background-color: #000000; 
+    color: #ffffff;
+    overflow: auto;
+    margin: 0;
+}
+header {
+    background: #bbb;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    min-height: 40px;
+}
+.page-main {
+    margin-top: 50px;
+    min-height: 50vh;
+    background:rgba(167, 129, 129, .3);
+}
+.page-main .gallery-wrapper {
+    display: flex; 
+    height: 300px;
+}
+.page-main .gallery-wrapper .gallery-body {
+    width: 90%;
+    background: royalblue;
+}
+
+footer {
+    background: rgb(75, 75, 75);
+    min-height: 50px;
+    width: 100%;
+}
