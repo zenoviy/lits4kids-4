@@ -3,6 +3,12 @@ body {
     color: #ffffff;
     overflow: auto;
     margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 header {
     background: #bbb;
@@ -11,18 +17,74 @@ header {
     top: 0;
     min-height: 40px;
 }
+.page-main #page-timer {
+    text-align: center;
+}
 .page-main {
     margin-top: 50px;
     min-height: 50vh;
-    background:rgba(167, 129, 129, .3);
+    background:rgba(0, 0, 0, 0.58);
+    border-bottom-right-radius: 50px;  /* додав заокруглення*/
+    border-bottom-left-radius: 50px;
+    overflow: auto;
+    box-shadow: 0px 2px 25px #000000f2;
 }
 .page-main .gallery-wrapper {
     display: flex; 
-    height: 300px;
+    height: 450px;
 }
 .page-main .gallery-wrapper .gallery-body {
     width: 90%;
     background: royalblue;
+    position: relative;  /* це правило дорзволило щоб внутрішні блоки з position: absolute; width: 100%; не вилазили за межі*/
+}
+
+.gallery-body {
+    overflow: hidden;
+}
+.gallery-body img {
+    width: 100%;
+}
+.gallery-body .inner-text-area {
+    position: absolute;
+    padding: 20px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%); 
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+}
+.gallery-wrapper button {
+    z-index: 10;
+    cursor: pointer;
+    font-size: 65px;
+    width: 5%;
+    background-color: rgb(163, 139, 112);
+    border: 3px solid brown;
+    transition: all 0.1s linear;
+}
+.gallery-wrapper button:active {
+    background-color: orange;
+    color: #ffffff;
+}
+
+.gallery-item {
+    opacity: 0;
+    animation: image-show .5s linear forwards;
+}
+
+@keyframes image-show {
+    0% {  opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.left-btn {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.right-btn {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 footer {
