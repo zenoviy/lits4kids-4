@@ -5,6 +5,7 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     outline: none;
 }
 .container {
