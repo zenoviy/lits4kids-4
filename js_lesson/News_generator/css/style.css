@@ -1,0 +1,16 @@
+.nav-menu-right {
+    float: right;
+    width: 100% !important;
+}
+
+.news-image-background {
+    background-color: rgb(97, 97, 180);
+    min-height: 200px;
+    width: 200vw;
+}
+main .nasa-single-news {
+    margin-top: -100px;
+    min-height: 200px;
+    background: #fff;
+}
+
