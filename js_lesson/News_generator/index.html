@@ -11,7 +11,7 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark menu-fixed">
         <div class="container">
 
             <a class="navbar-brand" href="#">News Logo</a>
@@ -34,10 +34,29 @@
 
 
     <header class="news-image-background" id="news-image-background"></header>
-    <main>
-        <section class="nasa-single-news container" 
-        id="nasa-single-news"></section>
+    <main >
+        <section class="container">
+            <div class="nasa-single-news row" id="nasa-single-news"></div>
+        </section>
+
+        <section class="container">
+            <h2>Mars rover image</h2>
+            <div class="m-3">
+                <input type="number" id="rover-data-input" value="1000"> 
+                <button id="search-rover-btn" class="btn btn-warning">Search</button> 
+                <span>Enter the Rover Mars sol</span>
+            </div>
+            
+            <div id="mars-rover-images" class="row row-cols-2 row-cols-md-4 g-2 display-photo">Loading...</div>
+            <button class="btn btn-primary show-more-btn" id="load-image">Load more photos</button>
+        </section>
+        
     </main>
+    <footer class="p-2">
+        <div class="container p-4 footer-box">
+            <h4>LITS 2020</h4>
+        </div>
+    </footer>
 
 
     <!-- JavaScript Bundle with Popper -->

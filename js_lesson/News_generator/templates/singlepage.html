@@ -12,32 +12,97 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark menu-fixed">
         <div class="container">
 
-           <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">News Logo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-menu-right" style="float:right">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
                     </li>
                 </ul>
             </div>
-            </div> 
-
         </div>
-      </nav>
+    </nav>
 
+    <section class="container mt-5">  
+        <div class="row mt-2 p-4">
+            <div class="picture-area col-md-8">
+                <img width="100%" id="mars-photo">
+            </div>
+            <div class="text-area col-md-4" id="text-area">
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="p-2">
+        <div class="container p-4 footer-box">
+            <h4>LITS 2020</h4>
+        </div>
+    </footer>
+      
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src="../js/script.js"></script>
+    <script>
+        let newsData = {};
+        let allPhotos = [];
+        const marsRoverPhoto = "/mars-photos/api/v1/rovers/curiosity/photos";
+        const API_KEY = "lWFC8gndbyBSQDRYIrBNSObzhVE0TuRNe7DQ8Lxw";
+        const HOST_NASA = "https://api.nasa.gov";
+        let urlParameters = {};
+
+        const marsPhoto = document.querySelector("#mars-photo");
+        const textArea = document.querySelector("#text-area");
+
+        function nasaRoverPhotoRequest(sol, camera, page){
+            let url = `${HOST_NASA}${marsRoverPhoto}?sol=${sol}&camera=${camera}&api_key=${API_KEY}`;
+            
+            fetch(url)
+            .then(response => response.json())
+            .then(response => {
+                allPhotos = response.photos;
+                newsData = allPhotos.find(photo => photo.id == urlParameters.photo_id);
+                console.log(newsData, allPhotos, urlParameters.photo_id)
+                marsPhoto.src = newsData.img_src;
+                displayPictureText(newsData)
+            })
+        }
+        
+        extractIdFromUrl()
+        nasaRoverPhotoRequest(urlParameters.sol, 'mast');
+        function extractIdFromUrl(){
+            let url = new URLSearchParams(location.search);
+            for(let [key, value] of url.entries()){
+                urlParameters[key] = value;
+            }
+            console.log(urlParameters)
+        }
+
+
+        function displayPictureText(newsData){
+
+            textArea.innerHTML = `
+                <h1>${newsData.rover.name}</h1>
+                <h2>${newsData.camera.name}</h2>
+                <ul>
+                    <li>sol: ${newsData.sol}</li>
+                    <li>status: ${newsData.rover.status}</li>
+                    <li>Earth Data: ${newsData.earth_date}</li>
+                    <li>Camera: ${newsData.camera.full_name}</li>
+                </ul>
+                <a href=${newsData.img_src}>${newsData.img_src}</a>
+            `
+        }
+    </script>
 </body>
 </html>

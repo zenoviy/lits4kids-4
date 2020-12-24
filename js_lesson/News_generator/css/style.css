@@ -5,12 +5,68 @@
 
 .news-image-background {
     background-color: rgb(97, 97, 180);
-    min-height: 200px;
-    width: 200vw;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 300px;
+    width: 100%;
+}
+.menu-fixed {
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 10;
 }
 main .nasa-single-news {
     margin-top: -100px;
     min-height: 200px;
     background: #fff;
 }
+.single-news-wrapper {
+    display: flex;
+}
+.single-news-wrapper 
+.single-news-image-area img {
+    width: 100%;
+}
+.single-news-wrapper 
+.single-news-image-area {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.single-news-wrapper 
+.single-news-content-area {
+    width: 60%;
+    padding: 10px;
+}
+.show-more-btn {
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: block;
+}
+.display-photo .btn {
+    display: block;
+    z-index: 5;
+    position: relative;
+    width: 100%;
+}
 
+
+.card img {
+    height: 200px;
+}
+.card-inner-area {
+    padding: 5px;
+}
+.card {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.39);
+}
+
+
+.footer-box {
+    border-top: 1px solid rgb(176, 176, 176);
+    text-align: center;
+}
